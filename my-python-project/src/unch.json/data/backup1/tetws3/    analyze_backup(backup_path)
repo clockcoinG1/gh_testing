@@ -1,0 +1,33 @@
+import os
+import plistlib
+import sqlite3
+
+def extract_plist(file_path):
+    with open(file_path, 'rb') as f:
+        plist = plistlib.load(f)
+    return plist
+
+def extract_sqlite(file_path, table_name):
+    conn = sqlite3.connect(file_path)
+    cursor = conn.cursor()
+    cursor.execute(f"SELECT * FROM {table_name}")
+    rows = cursor.fetchall()
+    return rows
+
+def analyze_backup(backup_path):
+    backup_name = os.path.basename(backup_path)
+    print(f"Analyzing backup: {backup_name}")
+    info_plist_path = os.path.join(backup_path, "Info.plist")
+    info_plist = extract_plist(info_plist_path)
+    print(f"Device name: {info_plist['Display Name']}")
+    print(f"Serial number: {info_plist['Serial Number']}")
+    print(f"Product type: {info_plist['Product Type']}")
+    print(f"Product version: {info_plist['Product Version']}")
+    print(f"OS version: {info_plist['OS Version']}")
+    manifest_path = os.path.join(backup_path, "Manifest.db")
+    file_manifest = extract_sqlite(manifest_path, "Files")
+    print(f"Number of files: {len(file_manifest)}")
+
+if __name__ == "__main__":
+    backup_path = "/path/to/backup"
+    analyze_backup(backup_path)

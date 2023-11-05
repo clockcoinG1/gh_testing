@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Flask App - Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+  </head>
+  <body>
+    {% extends 'base.html' %}
+    {% block content %}
+      <h1>Welcome to My Flask App!</h1>
+      <p>This is the home page.</p>
+    {% endblock %}
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+  </body>
+</html>

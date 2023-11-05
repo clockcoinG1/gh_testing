@@ -1,0 +1,23 @@
+{
+    "accessories": [
+        {
+            "accessoryID": "1234567890",
+            "name": "Smart Light",
+            "services": [
+                {
+                    "characteristics": [
+                        {
+                            "characteristicType": "On",
+                            "value": true
+                        },
+                        {
+                            "characteristicType": "Brightness",
+                            "value": 50
+                        }
+                    ],
+                    "serviceType": "Lightbulb"
+                }
+            ]
+        }
+    ]
+}

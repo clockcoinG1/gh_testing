@@ -1,0 +1,16 @@
+{
+    "ArchiveVersion": 2,
+    "CreationDate": "2021-01-01T00:00:00Z",
+    "Devices": [
+        {
+            "DeviceBackingIdentifier": "iPhone12,1",
+            "DeviceClass": "iPhone",
+            "DeviceName": "My iPhone"
+        }
+    ],
+    "IsEncrypted": false,
+    "OSVersion": "14.2",
+    "ProductType": "iPhone12,1",
+    "ProductVersion": "14.2",
+    "iTunesVersion": "12.11.0.26"
+}

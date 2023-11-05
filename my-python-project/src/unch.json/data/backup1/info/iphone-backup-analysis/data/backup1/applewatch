@@ -1,0 +1,38 @@
+{
+    "appleWatchData": {
+        "watchFaces": [
+            {
+                "name": "California",
+                "color": "black",
+                "complications": [
+                    "date",
+                    "weather",
+                    "activity"
+                ]
+            },
+            {
+                "name": "Modular",
+                "color": "silver",
+                "complications": [
+                    "date",
+                    "timer",
+                    "workout"
+                ]
+            }
+        ],
+        "apps": [
+            {
+                "name": "Messages",
+                "unreadCount": 3
+            },
+            {
+                "name": "Workout",
+                "lastWorkout": {
+                    "type": "running",
+                    "duration": "00:30:00",
+                    "caloriesBurned": 250
+                }
+            }
+        ]
+    }
+}
